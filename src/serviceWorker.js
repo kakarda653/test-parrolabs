@@ -14,7 +14,15 @@ const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
     // [::1] is the IPv6 localhost address.
     window.location.hostname === '[::1]' ||
-    // 127.0.0.0/8 are considered localhost for IPv4.
+    // 127.0.0.0/8 are considered localhost for IPv4.import { createStore, applyMiddleware } from 'redux';
+  // import thunk from 'redux-thunk';
+  // import rootReducer from './reducers/rootReducer';
+  // export default function configureStore() {
+  //  return createStore(
+  //   rootReducer,
+  //    applyMiddleware(thunk)
+  //  );
+  // }
     window.location.hostname.match(
       /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
     )
