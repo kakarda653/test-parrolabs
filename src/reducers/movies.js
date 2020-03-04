@@ -1,8 +1,9 @@
-import {GET_MOVIES, SET_FAVORITE_MOVIE} from '../actions/types';
+import {GET_MOVIE, GET_MOVIES, SET_FAVORITE_MOVIE, LOADING_MOVIE} from '../actions/types';
 
 const initialState = {
   list: [],
-  favorites: []
+  favorites: [],
+  selectedMovie: {}
 };
 
 export default (state = initialState, action) => {
@@ -15,7 +16,6 @@ export default (state = initialState, action) => {
       } else {
         newFavorites.splice(favoriteIndex, 1);
       }
-      console.log({newFavorites});
       return {
         ...state,
         favorites: newFavorites
@@ -24,6 +24,16 @@ export default (state = initialState, action) => {
       return {
         ...state,
         list: action.payload
+      };
+    case GET_MOVIE:
+      return {
+        ...state,
+        selectedMovie: action.payload
+      };
+    case LOADING_MOVIE:
+      return {
+        ...state,
+        selectedMovie: {loading: true}
       };
     default:
       return state;

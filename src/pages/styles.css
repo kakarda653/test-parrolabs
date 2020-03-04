@@ -2,3 +2,8 @@
     flex-wrap: wrap;
     display: flex;
 }
+
+.container-custom {
+    flex-wrap: wrap;
+    display: flex;
+}

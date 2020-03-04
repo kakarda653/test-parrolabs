@@ -1,2 +1,4 @@
 export const GET_MOVIES = 'GET_MOVIES'
+export const GET_MOVIE = 'GET_MOVIE'
+export const LOADING_MOVIE = 'LOADING_MOVIE'
 export const SET_FAVORITE_MOVIE = 'SET_FAVORITE_MOVIE'

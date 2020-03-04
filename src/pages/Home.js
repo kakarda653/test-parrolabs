@@ -9,7 +9,7 @@ import Card from '../components/Card';
 const App = ({getMovies, list, favorites}) => {
   useEffect(() => {
     getMovies();
-  }, []);
+  }, [getMovies]);
   return (
     <Container>
       <div className="container">
